@@ -13,6 +13,7 @@ import DeleteQuizModal from './quiz-delete-modal';
 import QuizEditModal from './quiz-edit-modal';
 import Link from 'next/link';
 import MuiDataTable from "mui-datatables";
+import { useAuth } from '@/hooks/use-auth';
 
 export const QuizzesTable = ({items}) => {
   
@@ -30,6 +31,9 @@ export const QuizzesTable = ({items}) => {
     setSelectedQuiz(quiz);
     setEditModalOpen(true);
   }
+
+  const {user} = useAuth()
+  const isAdmin = user && user.username == "admin"
 
   const handleCloseDeleteModal = () =>{
     setDeleteModalOpen(false);
@@ -57,10 +61,12 @@ export const QuizzesTable = ({items}) => {
     {name:"actions",label:"Actions",options:{
       customBodyRenderLite: index => <><IconButton 
       color="error" 
+      disabled={!isAdmin}
       onClick={()=> handleDeleteQuiz(items[index])} 
       title={`Delete Quiz with key ${items[index].key}`}><Delete /></IconButton>
       <IconButton 
       color="primary"
+      disabled={!isAdmin}
       onClick={()=>handleEditQuiz(items[index])}
       ><Edit /></IconButton>
       <Link 

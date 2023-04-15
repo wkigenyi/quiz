@@ -8,7 +8,7 @@ Once a user starts a quiz, they will be guided through the questions of that qui
 
 First, navigate to [https://quiz-psi-nine.vercel.app](https://quiz-psi-nine.vercel.app)
 
-Login with either admin/admin or answer/answer
+Login with either admin/admin or answer/answer. The usernames and passwords are case sensitive. The admin account has all access. The answer account can only take quizzes.
 
 ## Create a quiz
 

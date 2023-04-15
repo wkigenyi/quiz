@@ -7,6 +7,7 @@ import { QuizzesTable } from '@/sections/quiz/quizzes-table';
 import { useSelector } from 'react-redux';
 import { selectAllQuizzes } from '@/slices/quizzes';
 import { DashboardLayout } from '@/layouts/dashboard';
+import { useAuth } from '@/hooks/use-auth';
 
 
 const IndexPage = () => {
@@ -22,6 +23,8 @@ const IndexPage = () => {
   const openModal = () =>{
     setAddModalOpen(true);
   }
+
+  const {user} = useAuth()
 
   
 
@@ -57,6 +60,7 @@ const IndexPage = () => {
               <div>
                 <Button
                   onClick={openModal}
+                  disabled={!(user && user.username=="admin")}
                   startIcon={(
                     <SvgIcon fontSize="small">
                       <Add />

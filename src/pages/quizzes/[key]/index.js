@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box, Container, Stack, Typography, Unstable_Grid2 as Grid } from '@mui/material';
+import { Box, Container, Stack, Typography, Unstable_Grid2 as Grid, Alert } from '@mui/material';
 
 
 import { useRouter } from 'next/router';
@@ -20,7 +20,9 @@ const Page = () => {
   
   const quiz = useSelector(selectQuizEntities)[key];
 
-  const user = useAuth()
+  const {user} = useAuth()
+
+  
   
   
   
@@ -63,7 +65,7 @@ const Page = () => {
                 md={6}
                 lg={8}
               >
-                <QuestionsTable quizId={key} />
+                {user && user.username == "admin"?<QuestionsTable quizId={key} />: <Alert severity='info'>Only admin can modify questions</Alert>}
                 
               </Grid>
             </Grid>
