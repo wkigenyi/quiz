@@ -35,3 +35,7 @@ To delete question, in the questions table click on the red button corresponding
 ## Take a quiz
 
 In the quizzes table, click on the green button corresponding to the quiz of interest. On the resulting page, click on the "Take the quiz" button on quiz detail card. The user will be redirected to a page and guided through questions of the quiz. The user clicks on the "Start Quiz" button and then timer starts. On submission of an answer, the next question will be view and this will continue until the last question of the quiz is answered. Upon answering the last question, the quiz will end and the score will be displayed. The quiz can also prematurely end if the allocated time runs out. 
+
+## Notes
+
+A quiz can only be taken if it has at least 2 questions and a question can only be submitted if it has at least 2 answer options. 
