@@ -8,8 +8,9 @@ import '@fontsource/roboto/700.css';
 import { ThemeProvider } from '@mui/material';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
+import {Inter} from "next/font/google"
 
-
+const inter = Inter({weight:["100","200","300","400","500","600","700","800","900"],display:"swap",subsets:["latin"]})
 export default function App({ Component, pageProps }) {
 
   const theme = createTheme()
@@ -25,7 +26,10 @@ export default function App({ Component, pageProps }) {
     <Provider store={store}>
       <AuthProvider>
         <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+          <main className={inter.className}>
+          <Component {...pageProps} />
+          </main>
+      
       </ThemeProvider>
       </AuthProvider>
     </Provider>
