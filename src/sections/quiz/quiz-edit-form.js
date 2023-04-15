@@ -115,7 +115,7 @@ export default function QuizEditFrom({onClose,quiz}){
               error={!!(formik.touched.duration && formik.errors.duration)}
               fullWidth
               helperText={formik.touched.duration && formik.errors.duration}
-              label="Duration (In Minutes)"
+              label="Duration (In Seconds)"
               name="duration"
               required
               type="number"
