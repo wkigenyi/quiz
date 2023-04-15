@@ -1,38 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Quiz App
+
+The quiz app provides a platform for users to create, modify and delete quizzes. Users can also take the quizzes and instantly get their score at the end of the quiz.
+
+Once a user starts a quiz, they will be they will be guided through the questions of that quiz one at a time. The quiz attempt will end after the user has submitted the answer to the last question or when the specified duration for that quiz runs out.
 
 ## Getting Started
 
-First, run the development server:
+First, navigate to [https://quiz-psi-nine.vercel.app](https://quiz-psi-nine.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Login with either admin/admin or answer/answer
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Create a quiz
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+To create a quiz, on the quizzes table click on the blue button labeled "Add New Quiz". The form that pops up, specify the details of the quiz including the duration in seconds and the click the button at the bottom of the form to create the quiz.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Update a quiz
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To update a quiz, in the quiz table, click on the blue button corresponding to the quiz to be edited. In the form that pops up, make the required changes and click the update button at the bottom of the form.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Delete a quiz
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In the quizzes table, click on the red delete button corresponding to the quiz that needs to be deleted. In the form that pops up, confirm deletion by clicking on the delete button.
